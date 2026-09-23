@@ -26,11 +26,17 @@ Both packages use the Codex v2 sprite contract:
 johnny5i_PET_codex/
 ├── docs/
 │   ├── johnny5i-preview.png
-│   └── pixypi-preview.png
+│   ├── pixypi-preview.png
+│   └── VOICE_RUNTIME_INTEGRATION.md
 ├── pet/
 │   ├── johnny5i/
 │   │   ├── pet.json
-│   │   └── spritesheet.webp
+│   │   ├── spritesheet.webp
+│   │   └── voice/
+│   │       ├── JOHNNY5I_IDENTITY.md
+│   │       ├── johnny5i-identity.json
+│   │       ├── LUMA_IDENTITY.md      # Historical correction pointer
+│   │       └── luma-identity.json    # Machine-readable correction pointer
 │   └── pixypi/
 │       ├── pet.json
 │       └── spritesheet.webp
@@ -127,6 +133,18 @@ After installation:
 
 For Codex CLI, enter `/pets` or `/pet` to open the pet picker. Terminal pets
 require a terminal that supports iTerm2, Kitty graphics, or Sixel.
+
+## johnny5i voice identity
+
+johnny5i's voice identity matches the visual PET. When asked who he is, he should answer:
+
+> I'm johnny5i, John's curious maintenance-robot PET.
+
+The portable identity record is stored in [`pet/johnny5i/voice/JOHNNY5I_IDENTITY.md`](pet/johnny5i/voice/JOHNNY5I_IDENTITY.md), with structured data in [`johnny5i-identity.json`](pet/johnny5i/voice/johnny5i-identity.json).
+
+Luma is a separate voice companion associated with the PixyPi PET. The two retained Luma files are correction pointers so an earlier local draft cannot be mistaken for johnny5i's identity.
+
+Current Codex builds treat PET artwork and realtime voice identity as separate systems. The voice sidecar is installed with johnny5i, but it is not automatically loaded by the current voice runtime. See [`docs/VOICE_RUNTIME_INTEGRATION.md`](docs/VOICE_RUNTIME_INTEGRATION.md) for the verified boundary, bootstrap prompt, and acceptance checks.
 
 ## Web compatibility
 

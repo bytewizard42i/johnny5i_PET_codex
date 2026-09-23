@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "status": "historical_correction_pointer",
+  "doNotLoadAsPetIdentity": true,
+  "incorrectAssociation": {
+    "voiceIdentity": "Luma",
+    "petId": "johnny5i",
+    "recordedInLocalDraftOn": "2026-08-06"
+  },
+  "correctAssociations": {
+    "pixypi": "Luma",
+    "johnny5i": "johnny5i"
+  },
+  "johnny5iIdentityDocument": "JOHNNY5I_IDENTITY.md",
+  "lumaCanonicalLocation": "The separate PixyPi PET and its private family records"
+}
